@@ -30,7 +30,6 @@ h1{
     letter-spacing: 1px;
 }
 
-/* nav */
 
 /* home-container */
 
@@ -41,13 +40,17 @@ header{
     height: 100vh;
 }
 
+/* Configuracion del logo */
+
 #logo{
-    height: 200px;
+    height: 250px;
     width: auto;
     float: left;
     margin-left: 100px;
     margin-right: 50px;
 }
+
+/* nav */
 
 .nav{
     float: right;
@@ -68,13 +71,78 @@ header{
     font-size: 90%;
     letter-spacing: 2px;
     word-spacing: 4px;
-    transition: border-bottom 0.6s;
+    transition: 0.5s;
 }
 
 .nav li a:hover{
-    border-bottom: 2px solid rgb(253, 63, 5);
+    /* border-bottom: 2px solid rgb(253, 63, 5); */
+    padding: 12px;
+    border: solid 2px white;
+    background-color: white;
+    color:black;
+    border-radius: 15px;
 
+}
+.nav li a:active{
+    padding: 10px;
+    border: solid 2px white;
+    background-color: orange;
+    color:white;
+    border-radius: 15px;
 }
 
 /* Configuraciones particulares: */
+
+.home-container{
+    display: inline-block;
+    margin-left: 50%;
+    margin-top: 100px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    transform: translate(-50%,50%);
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 3px solid  white;
+    color:white;
+    margin-right: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.btn-more:hover{
+    transition: 0.3s;
+    padding: 12px 32px;
+    background-color: rgb(255, 141, 10);
+    color:white;
+}
+.btn-more:active{
+    transition: 0.3s;
+    padding: 8px 28px;
+    background-color: rgb(189, 101, 2);
+    color:black;
+    border: 3px solid  black;
+
+}
+.btn-contact:hover{
+    transition: 0.3s;
+    padding: 12px 32px;
+    background-color: rgb(255, 141, 10);
+    color:white;
+}
+.btn-contact:active{
+    transition: 0.3s;
+    padding: 8px 28px;
+    background-color: rgb(189, 101, 2);
+    color:black;
+    border: 3px solid  black;
+
+}
+
+
+
 
