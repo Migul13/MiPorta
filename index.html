@@ -7,15 +7,13 @@
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link rel="shortcut icon" href="/image/iconos/logo.ico">
-
-    <img>
-
 </head>
 <body>
+    <div>
     <header>
+        <img ID="logo" src="/image/logo.png" alt="Logotipo de E.Miguel Páramo S.">
             <nav>
                 <div class="row">
-                <img ID="logo" src="/image/logo.png" alt="Logotipo">
                 <ul class="nav">
                     <li><a href="#section-description">Sobre mi</a></li>
                     <li><a href="#section-tecno">Tecnologías</a></li>
@@ -29,7 +27,15 @@
                     <a href="" class="btn btn-contact">Contacto</a>
                     <a href="" class="btn btn-more"> Ver más</a>
             </div>
+            <!-- Crédito de la imagen -->
+            <p>Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pankaj Patel</a> on <a href="https://unsplash.com/photos/vxgt_Zu0O00?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
     </header>
+    <footer>
+        <p>Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pankaj Patel</a> on <a href="https://unsplash.com/photos/vxgt_Zu0O00?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+
+    </footer>
+    </div>
 
     <section Id="section-description">
         <div class="row">
@@ -50,19 +56,18 @@
             <!-- Construimos los contenedores de los iconos de tecnología -->
             <!-- Git -->
             <div class="col span-1-of-3">
-                <div class="plan-content">
+                <div class="tecno-content">
                     <div>
                         <h3>Git</h3>
                         <img class="icono-activo" src="/image/iconos/git-icon-240.svg" alt="Ícono de Git">
-                        <p class="desicon"><a target="_blank" href="https://icons8.com/icon/20906/git">Git</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-                        
+                        <p class="desicon"><a target="_blank" href="https://icons8.com/icon/20906/git">Git</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>     
                     </div>
                 </div>
             </div>
 
             <!-- HTML -->
             <div class="col span-1-of-3">
-                <div class="plan-content">
+                <div class="tecno-content">
                     <div>
                         <h3>HTML5</h3>
                         <img class="icono-activo" src="/image/iconos/hml5-icon-240.svg" alt="Ícono de HTML">
@@ -75,7 +80,7 @@
 
             <!-- CSS -->
             <div class="col span-1-of-3">
-                <div class="plan-content">
+                <div class="tecno-content">
                     <div>
                         <h3>CSS3</h3>
                         <img class="icono-activo" src="/image/iconos/CSS3-icon-240.svg" alt="Ícono de Git">
@@ -92,14 +97,53 @@
     <section id="section-proyectos">
         <div class="row">
             <h2>Mis Proyectos</h2>
+            <ul class="img-clearfix">
+                <li><figure class="photo"><figcaption>Photo by <a href="https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Voros</a> on <a href="https://unsplash.com/photos/phIFdC6lA4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </figcaption><img src="/image/dummy.jpg" alt="Imagen Proyecto Uno"></figure></li>
+                <li><figure class="photo"><figcaption>Photo by <a href="https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Voros</a> on <a href="https://unsplash.com/photos/phIFdC6lA4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </figcaption><img src="/image/dummy.jpg" alt="Imagen Proyecto Dos"></figure></li>
+                <li><figure class="photo"><figcaption>Photo by <a href="https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Voros</a> on <a href="https://unsplash.com/photos/phIFdC6lA4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </figcaption><img src="/image/dummy.jpg" alt="Imagen Proyecto Tres"></figure></li>
+                <li><figure class="photo"><figcaption>Photo by <a href="https://unsplash.com/@vorosbenisop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Benjamin Voros</a> on <a href="https://unsplash.com/photos/phIFdC6lA4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </figcaption><img src="/image/dummy.jpg" alt="Imagen Proyecto Cuatro"></figure></li>
+            </ul>
         </div>
     
     </section>
         
-
+    <!-- Seccion Footer -->
     <footer>
-        <p>Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pankaj Patel</a> on <a href="https://unsplash.com/photos/vxgt_Zu0O00?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </p>
+        <div class="row">
+            <div class="cols span-1of-2">
+                <ul class="footer-nav">
+                    <li><a href="#logo">Inicio</a></li>
+                    <li><a href="#section-description">Sobre mi</a></li>
+                    <li><a href="#section-tecno">Tecnologías</a></li>
+                    <li><a href="#section-proyectos">Proyectos</a></li>
+                </ul>
+
+                <div class="cols span-1of-2">
+                    <ul class="social-links">
+                        <div>
+                            <li href=""><img class="icono-redes" src="/image/iconos/icons8-git-144.svg" alt="Ícono de Git">
+                                <p class="desicon"><a target="_blank" href="https://icons8.com/icon/20906/git">Git</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p></li>
+
+                        </div>
+                        <div>
+                            <li href=""><img class="icono-redes" src="/image/iconos/icons8-git-144.svg" alt="Ícono de Git">
+                                <p class="desicon"><a target="_blank" href="https://icons8.com/icon/20906/git">Git</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p></li>
+
+                        </div>
+                        <div>
+                            <li href=""><img class="icono-redes" src="/image/iconos/icons8-git-144.svg" alt="Ícono de Git">
+                                <p class="desicon"><a target="_blank" href="https://icons8.com/icon/20906/git">Git</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p></li>
+
+                        </div>
+                    </ul> 
+
+            </div>
+        </div>
+        
     </footer>
 </body>
 </html>

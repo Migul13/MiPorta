@@ -4,7 +4,16 @@
     margin:0;
     box-sizing: border-box;
 }
-
+.clearfix{
+    zoom:1;
+}
+.clearfix:after{
+    content: ".";    
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 .row{
     max-width: 1140px;
     margin: 0 auto;
@@ -17,6 +26,8 @@ html {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+
 }
 
 section{
@@ -67,6 +78,15 @@ header{
     height: 100vh;
 }
 
+header p{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+    overflow: auto;
+}
+ 
+
 /* Configuracion del logo */
 
 #logo{
@@ -75,6 +95,7 @@ header{
     float: left;
     margin-left: 100px;
     margin-right: 50px;
+    margin-top: 40px;
 }
 
 /* nav */
@@ -83,7 +104,6 @@ header{
     float: right;
     list-style: none;
     margin: 60px 70px;
-
 }
 .nav li{
     display: inline-block;
@@ -96,7 +116,7 @@ header{
     font-size: 90%;
     letter-spacing: 2px;
     word-spacing: 4px;
-    transition: 0.5s;
+
 }
 
 .nav li a:hover{
@@ -124,7 +144,8 @@ header{
     margin-top: 100px;
     letter-spacing: 1px;
     word-spacing: 3px;
-    transform: translate(-50%,50%);
+    transform: translate(-50%,-50%);
+    text-align: end;
 }
 
 .btn{
@@ -173,6 +194,7 @@ header{
     line-height: 145%;
     width: 70%;
     margin-left: 12%;
+    text-align: justify;
 }
 
 /*Section de Tecnologías*/
@@ -194,10 +216,195 @@ header{
     font-size: 15px;
     text-align: center;
 }
-.plan-content{
+.tecno-content{
     margin: 0 auto;
     image-orientation: center;
     text-align: center;
 }
+/* Editando las imagenes de proyectos */
 
+.img-clearfix{
+    list-style: none;
+    width: 100%;
+}
+.img-clearfix li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.photo{
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+    background-color: #000;
+    font-size: 10px;
+    text-align:end;
+}
+
+.photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+}
+.photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+
+
+}
+/* Configutacion del footer */
+
+
+    .footer-nav{
+        float: right;
+        list-style: none;
+        margin: 60px 70px;
+
+    }
+    .footer-nav li{
+        display: inline-block;
+        margin-left: 40px;
+
+    }
+    .footer-nav li a{
+        text-decoration: none;
+        color: white;
+        font-size: 90%;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+
+    }
+
+    .footer-nav li a:hover{
+        /* border-bottom: 2px solid rgb(253, 63, 5); */
+        padding: 12px;
+        border: solid 2px white;
+        background-color: white;
+        color:black;
+        border-radius: 15px;
+
+    }
+    .footer-nav li a:active{
+        padding: 10px;
+        border: solid 2px white;
+        background-color: orange;
+        color:white;
+        border-radius: 15px;
+    }
+
+
+
+/* Media Querys */
+
+/*Pantallas de  1023px a 1200px pantalla*/
+@media only screen and (max-width:1200px){
+    .home-container{
+        width:100%;
+        padding: 0 2%;
+
+    }   
+    .row{
+        padding: 0 2%;
+    }
+
+}
+
+
+
+/*Pantallas de 767px a 1023px pantalla*/
+@media only screen and (max-width:1023px){
+    body{
+        font-size: 16px;
+        }
+    section{
+        padding: 60px 0; 
+        }
+    .text-center{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .tecno-content{
+        width:100%;
+        margin-left: 0;
+        
+    }
+
+}
+
+
+/*Tablets pequeños de 481px a 767px pantalla*/
+@media only screen and (max-width:767px){
+
+    body{
+    font-size: 16px;
+    }
+
+    section{
+        padding: 30px 0;
+    }
+
+    .row,
+    .home-container{
+        padding: 0 4px;
+    }
+
+    .col{
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    h1{
+        font-size: 180%;
+    }
+    h2{
+        font-size: 150%;
+
+    }
+    .text-center{
+        width: 100%;
+        margin-left: 0%;
+    }
+
+}
+
+/*Telefonos pequeños de 0 a 480 px pantalla*/
+@media only screen and (max-width:480px){
+    
+    h1{
+        color:#d1d1d1;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 150%;
+        letter-spacing: 4px;
+        letter-spacing: 1px;    }
+
+    section{
+        padding:25px;
+
+    }
+
+    .nav{
+        float: center;
+        list-style: none;
+        margin: 50px;
+    }
+    .nav li{
+        display: block;
+        margin-left: 20px;
+        margin: 50px;
+    }
+
+    header{
+        height: 110vh;
+    }
+
+    .home-container{
+        margin-top: 30px;
+        text-align: center;
+    }
+}
 
