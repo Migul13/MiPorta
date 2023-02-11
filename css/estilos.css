@@ -4,8 +4,10 @@
     margin:0;
     box-sizing: border-box;
 }
+
+/* Para la transofmración de las imágenes en mis proyectos */
 .clearfix{
-    zoom:1;
+    zoom:1.1;
 }
 .clearfix:after{
     content: ".";    
@@ -14,29 +16,39 @@
     height: 0;
     visibility: hidden;
 }
-.row{
-    max-width: 1140px;
-    margin: 0 auto;
-}
 
+/* Para la transofmración en responsive */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* EL fondo con degradado de la página */
 html {
-    background-color: #fff;
+    background: linear-gradient(27deg,rgba(241, 106, 16, 0.589),rgba(73, 4, 100, 0.582));
     color: rgb(72, 72, 72);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
 
 }
-
+/* Configuración de cada sección (Sombre mi, tecnologías, proyectos)*/
 section{
     padding: 80px 0;
-    background-color: oldlace;
 }
 
 
 /* Encabezados: */
+div.contenedor{
+    background-image: linear-gradient(rgba(0,0,0,0.705),rgba(0,0,0,0.705)),url(../image/bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    text-align:left;
+}
 h1{
     color:#d1d1d1;
     margin-top: 0;
@@ -44,6 +56,7 @@ h1{
     font-size: 240%;
     letter-spacing: 4px;
     letter-spacing: 1px;
+    padding:50px;
 }
 
 h2{
@@ -71,13 +84,6 @@ h3{
 
 /* home-container */
 
-header{
-    background-image: linear-gradient(rgba(0,0,0,0.705),rgba(0,0,0,0.705)),url(../image/bg.jpeg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
 header p{
     font-size: 15px;
     margin: 0;
@@ -98,96 +104,6 @@ header p{
     margin-top: 40px;
 }
 
-/* nav */
-
-.nav{
-    float: right;
-    list-style: none;
-    margin: 60px 70px;
-}
-.nav li{
-    display: inline-block;
-    margin-left: 40px;
-
-}
-.nav li a{
-    text-decoration: none;
-    color: white;
-    font-size: 90%;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-
-}
-
-.nav li a:hover{
-    /* border-bottom: 2px solid rgb(253, 63, 5); */
-    padding: 12px;
-    border: solid 2px white;
-    background-color: white;
-    color:black;
-    border-radius: 15px;
-
-}
-.nav li a:active{
-    padding: 10px;
-    border: solid 2px white;
-    background-color: orange;
-    color:white;
-    border-radius: 15px;
-}
-
-/* Configuraciones clase: home-container y btn: */
-
-.home-container{
-    display: inline-block;
-    margin-left: 50%;
-    margin-top: 100px;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    transform: translate(-50%,-50%);
-    text-align: end;
-}
-
-.btn{
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    border: 3px solid  white;
-    color:white;
-    margin-right: 5px;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.btn-more:hover{
-    transition: 0.3s;
-    padding: 12px 32px;
-    background-color: rgb(255, 141, 10);
-    color:white;
-}
-.btn-more:active{
-    transition: 0.3s;
-    padding: 8px 28px;
-    background-color: white;
-    color:black;
-    border: 3px solid  white;
-
-}
-.btn-contact:hover{
-    transition: 0.3s;
-    padding: 12px 32px;
-    background-color: rgb(255, 141, 10);
-    color:white;
-}
-.btn-contact:active{
-    transition: 0.3s;
-    padding: 8px 28px;
-    background-color: white;
-    color:black;
-    border: 3px solid  white;
-
-}
 
 /*Section Description */
 .text-content{
@@ -197,13 +113,12 @@ header p{
     text-align: justify;
 }
 
-/*Section de Tecnologías*/
+/* Tecnologías Iconos*/
 
 .icono-activo{
     transition: 0.9s;
     margin: 0 auto;
-    image-orientation: center;
-        
+    image-orientation: center;  
 }
 
 .icono-activo:hover{
@@ -226,11 +141,13 @@ header p{
 .img-clearfix{
     list-style: none;
     width: 100%;
+
 }
 .img-clearfix li{
     display: block;
     float: left;
     width: 25%;
+
 }
 .photo{
     width: 100%;
@@ -253,23 +170,27 @@ header p{
 }
 .photo img:hover{
     opacity: 1;
-    transform: scale(1.03);
+    transform: scale(1.002);
 
 
 }
 /* Configutacion del footer */
 
+    footer{
+        background-color: grey;
+    }
+
 
     .footer-nav{
+        display: inline-block;
         float: right;
         list-style: none;
         margin: 60px 70px;
 
     }
     .footer-nav li{
-        display: inline-block;
         margin-left: 40px;
-
+        padding: 0;
     }
     .footer-nav li a{
         text-decoration: none;
@@ -297,114 +218,344 @@ header p{
         border-radius: 15px;
     }
 
-
-
-/* Media Querys */
-
-/*Pantallas de  1023px a 1200px pantalla*/
-@media only screen and (max-width:1200px){
-    .home-container{
-        width:100%;
-        padding: 0 2%;
-
-    }   
-    .row{
-        padding: 0 2%;
+    .icono-redes{
+        float: right;
     }
+
+
+/* Para el modelo responsive: */
+    /* Para pantallas grandes */
+@media only screen and (min-width: 1024px){
+
+[class*="col-"] {
+    width: 100%;
+  }
+
+  nav div.menunav ul{
+    position: absolute;
+    top:245px;
+    right:10%;
+    list-style: none;
+    margin: 0;
+}
+div.menunav ul li{
+    display: inline-block;
+    margin-left:none;
+    padding:0;
+    margin: 0 15px;
+}
+div.menunav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 90%;
+    letter-spacing: 2px;
+    word-spacing: 4px;
 
 }
 
-
-
-/*Pantallas de 767px a 1023px pantalla*/
-@media only screen and (max-width:1023px){
-    body{
-        font-size: 16px;
-        }
-    section{
-        padding: 60px 0; 
-        }
-    .text-center{
-        width: 80%;
-        margin-left: 10%;
-    }
-    .tecno-content{
-        width:100%;
-        margin-left: 0;
-        
-    }
+div.menunav ul li a:hover{
+    /* border-bottom: 2px solid rgb(253, 63, 5); */
+    padding: 12px;
+    border: solid 2px white;
+    background-color: white;
+    color:black;
+    border-radius: 15px;
 
 }
-
-
-/*Tablets pequeños de 481px a 767px pantalla*/
-@media only screen and (max-width:767px){
-
-    body{
-    font-size: 16px;
-    }
-
-    section{
-        padding: 30px 0;
-    }
-
-    .row,
-    .home-container{
-        padding: 0 4px;
-    }
-
-    .col{
-        width: 100%;
-        margin: 0 0 4% 0;
-    }
-    h1{
-        font-size: 180%;
-    }
-    h2{
-        font-size: 150%;
-
-    }
-    .text-center{
-        width: 100%;
-        margin-left: 0%;
-    }
-
+div.menunav ul li a:active{
+    padding: 10px;
+    border: solid 2px white;
+    background-color: orange;
+    color:white;
+    border-radius: 15px;
+}
 }
 
-/*Telefonos pequeños de 0 a 480 px pantalla*/
-@media only screen and (max-width:480px){
+    /* For mobile phones: */
+    @media only screen and (min-width: 0px) and (max-width: 350px){
+        /* Encabezados: */
     
+        h1{
+            color:#d1d1d1;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 100%;
+            letter-spacing: 4px;
+            letter-spacing: 1px;
+        }
+    
+    
+        /* Crédito de la imagen */
+        header{
+            height: fit-content;
+        }
+        header p{
+            font-size: 7px;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+        /* Elementos de lista */
+        div.menunav ul {
+            list-style: none;
+            margin: 0 10%;
+            font-size: 70%;
+            height: 170px;
+        }
+        
+        div.menunav ul li{
+            display: block;
+            margin:0;
+            padding:12px;
+        }
+    
+        div.menunav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 90%;
+            letter-spacing: 2px;
+            word-spacing: 4px;
+        
+        }
+        /* Logotipo */
+        #logo{
+            height: 100px;
+            width: auto;
+            margin-left: 4%;
+            margin-top: 10%;
+            margin-right: 10%;
+            margin-bottom: 10%;
+        }
+    
+    
+        .clearfix:after{
+            content: ".";    
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+    
+    
+        .img-clearfix li{
+            width: 100%;
+            margin: none;
+        }
+    
+    
+    
+     }
+
+ @media only screen and (min-width: 350px) and (max-width: 540px){
+    /* Encabezados: */
+
+    h1{
+        color:#d1d1d1;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 100%;
+        letter-spacing: 4px;
+        letter-spacing: 1px;
+    }
+
+
+    /* Crédito de la imagen */
+    header{
+        height: fit-content;
+    }
+    header p{
+        font-size: 7px;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    /* Elementos de lista */
+    div.menunav ul {
+        list-style: none;
+        margin: 0 10%;
+        font-size: 90%;
+        height: 170px;
+    }
+    
+    div.menunav ul li{
+        display: block;
+        margin:0;
+        padding:12px;
+    }
+
+    div.menunav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 90%;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+    
+    }
+    /* Logotipo */
+    #logo{
+        height: 100px;
+        width: auto;
+        margin-left: 4%;
+        margin-top: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+    }
+
+
+    .clearfix:after{
+        content: ".";    
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+
+
+    .img-clearfix li{
+        width: 100%;
+        margin: none;
+    }
+
+
+
+ }
+
+ @media only screen and (min-width: 500px) and (max-width: 850px){
+    /* Encabezados: */
+
     h1{
         color:#d1d1d1;
         margin-top: 0;
         margin-bottom: 20px;
         font-size: 150%;
         letter-spacing: 4px;
-        letter-spacing: 1px;    }
-
-    section{
-        padding:25px;
-
+        letter-spacing: 1px;
     }
 
-    .nav{
-        float: center;
-        list-style: none;
-        margin: 50px;
-    }
-    .nav li{
-        display: block;
-        margin-left: 20px;
-        margin: 50px;
-    }
 
+    /* Crédito de la imagen */
     header{
-        height: 110vh;
+        height: fit-content;
+    }
+    header p{
+        font-size: 7px;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    /* Elementos de lista */
+    div.menunav ul {
+        position: relative;
+        list-style: none;
+        top:30px;
+        right:8%;
+        margin: 0;
+        font-size: 90%;
+        height: 170px;
+    }
+    
+    div.menunav ul li{
+        display: inline-block;
+        margin:0;
+        padding:10px;
     }
 
-    .home-container{
-        margin-top: 30px;
-        text-align: center;
+    div.menunav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 90%;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+    
     }
-}
+    /* Logotipo */
+    #logo{
+        height: 200px;
+        width: auto;
+        margin-left: 4%;
+        margin-top: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+    }
 
+
+    .clearfix:after{
+        content: ".";    
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+
+
+    .img-clearfix li{
+        width: 100%;
+        margin: none;
+    }
+
+
+
+ }
+      /* For tablets: */
+  @media only screen and (min-width: 850px) and (max-width:1023px){
+
+
+    /* Encabezados: */
+
+    h1{
+        color:#d1d1d1;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 150%;
+        letter-spacing: 4px;
+        letter-spacing: 1px;
+    }
+
+
+    /* Crédito de la imagen */
+    header{
+        height: fit-content;
+    }
+    header p{
+        font-size: 7px;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    /* Elementos de lista */
+    div.menunav ul {
+        position: absolute;
+        top:180px;
+        right:10%;
+        list-style: none;
+        margin: 0;
+
+    }
+    
+    div.menunav ul li{
+        display: inline-block;
+        margin:0;
+        padding:12px;
+        margin: 1px solid white;
+    }
+
+    div.menunav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+    
+    }
+    /* Logotipo */
+    #logo{
+        height: 189px;
+        width: auto;
+
+    }
+
+
+
+ }
+
+ 
