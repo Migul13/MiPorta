@@ -17,7 +17,7 @@
     visibility: hidden;
 }
 
-/* Para la transofmración en responsive */
+/* Para la acomodar los elementos responsive */
 .row::after {
     content: "";
     clear: both;
@@ -126,6 +126,9 @@ header p{
     transition: 0.9s;
     
 }
+
+/* Descripción del ícono */
+
 .desicon{
     margin-top:-12px;
     font-size: 15px;
@@ -133,6 +136,7 @@ header p{
 }
 .tecno-content{
     margin: 0 auto;
+    padding:0;
     image-orientation: center;
     text-align: center;
 }
@@ -177,18 +181,20 @@ header p{
 /* Configutacion del footer */
 
     footer{
-        background-color: grey;
+        background-color: rgb(75, 75, 75);
+        color:seashell;
     }
 
-
+    .barranav{
+        text-align: center;
+    }
     .footer-nav{
-        display: inline-block;
-        float: right;
+        margin: 0;
+        text-align: center;
         list-style: none;
-        margin: 60px 70px;
-
     }
     .footer-nav li{
+        float: left;
         margin-left: 40px;
         padding: 0;
     }
@@ -218,61 +224,17 @@ header p{
         border-radius: 15px;
     }
 
+    
     .icono-redes{
-        float: right;
+        margin: auto 0;
+        width: 20%;
+
     }
 
 
 /* Para el modelo responsive: */
-    /* Para pantallas grandes */
-@media only screen and (min-width: 1024px){
-
-[class*="col-"] {
-    width: 100%;
-  }
-
-  nav div.menunav ul{
-    position: absolute;
-    top:245px;
-    right:10%;
-    list-style: none;
-    margin: 0;
-}
-div.menunav ul li{
-    display: inline-block;
-    margin-left:none;
-    padding:0;
-    margin: 0 15px;
-}
-div.menunav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 90%;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-
-}
-
-div.menunav ul li a:hover{
-    /* border-bottom: 2px solid rgb(253, 63, 5); */
-    padding: 12px;
-    border: solid 2px white;
-    background-color: white;
-    color:black;
-    border-radius: 15px;
-
-}
-div.menunav ul li a:active{
-    padding: 10px;
-    border: solid 2px white;
-    background-color: orange;
-    color:white;
-    border-radius: 15px;
-}
-}
-
-    /* For mobile phones: */
-    @media only screen and (min-width: 0px) and (max-width: 350px){
+    /* Media Querys para celulares pequeños*/
+ @media only screen and (min-width: 0px) and (max-width: 350px){
         /* Encabezados: */
     
         h1{
@@ -295,11 +257,14 @@ div.menunav ul li a:active{
             padding: 0;
             text-align: right;
         }
-        /* Elementos de lista */
+        /* Elementos de navegación */
+        .menunav{
+            text-align: right;
+        }
         div.menunav ul {
             list-style: none;
-            margin: 0 10%;
-            font-size: 70%;
+            margin: 0;
+            font-size: 69%;
             height: 170px;
         }
         
@@ -319,12 +284,9 @@ div.menunav ul li a:active{
         }
         /* Logotipo */
         #logo{
-            height: 100px;
-            width: auto;
-            margin-left: 4%;
-            margin-top: 10%;
-            margin-right: 10%;
-            margin-bottom: 10%;
+            width: 35%;
+            height: auto;
+            margin:  20px 20px;
         }
     
     
@@ -344,8 +306,8 @@ div.menunav ul li a:active{
     
     
     
-     }
-
+}
+    /* Media Querys para celulares medianos y grandes*/
  @media only screen and (min-width: 350px) and (max-width: 540px){
     /* Encabezados: */
 
@@ -353,7 +315,7 @@ div.menunav ul li a:active{
         color:#d1d1d1;
         margin-top: 0;
         margin-bottom: 20px;
-        font-size: 100%;
+        font-size: 120%;
         letter-spacing: 4px;
         letter-spacing: 1px;
     }
@@ -362,6 +324,7 @@ div.menunav ul li a:active{
     /* Crédito de la imagen */
     header{
         height: fit-content;
+        text-align: center;
     }
     header p{
         font-size: 7px;
@@ -369,11 +332,17 @@ div.menunav ul li a:active{
         padding: 0;
         text-align: right;
     }
+    /*Configuramos de forma personalizada los menus de navegación*/
     /* Elementos de lista */
+    .menunav{
+        text-align: right;
+    }
     div.menunav ul {
+        display: inline-block;
         list-style: none;
-        margin: 0 10%;
-        font-size: 90%;
+        margin: 0;
+        margin-right: 25px;
+        font-size: 80%;
         height: 170px;
     }
     
@@ -386,19 +355,16 @@ div.menunav ul li a:active{
     div.menunav ul li a{
         text-decoration: none;
         color: white;
-        font-size: 90%;
+        font-size: 80%;
         letter-spacing: 2px;
         word-spacing: 4px;
     
     }
     /* Logotipo */
     #logo{
-        height: 100px;
-        width: auto;
-        margin-left: 4%;
-        margin-top: 10%;
-        margin-right: 10%;
-        margin-bottom: 10%;
+        width: 32.5%;
+        height: auto;
+        margin:  20px 20px;
     }
 
 
@@ -416,18 +382,32 @@ div.menunav ul li a:active{
         margin: none;
     }
 
+    /* Tecnologías Iconos*/
+
+.icono-activo{
+    width: 90%;
+    transition: 0.9s;
+    margin: 0 auto;
+    image-orientation: center;  
+}
+
+.icono-activo:hover{
+    transform: scale(1.1);
+    transition: 0.9s;
 
 
- }
-
- @media only screen and (min-width: 500px) and (max-width: 850px){
+    }
+}
+    /* Media Querys para celulares medianos y tablets*/
+ @media only screen and (min-width: 541px) and (max-width: 850px){
     /* Encabezados: */
 
     h1{
+        text-align: right;
         color:#d1d1d1;
         margin-top: 0;
         margin-bottom: 20px;
-        font-size: 150%;
+        font-size: 170%;
         letter-spacing: 4px;
         letter-spacing: 1px;
     }
@@ -438,7 +418,7 @@ div.menunav ul li a:active{
         height: fit-content;
     }
     header p{
-        font-size: 7px;
+        font-size: 9px;
         margin: 0;
         padding: 0;
         text-align: right;
@@ -446,6 +426,7 @@ div.menunav ul li a:active{
     /* Elementos de lista */
     div.menunav ul {
         position: relative;
+        text-align: right;
         list-style: none;
         top:30px;
         right:8%;
@@ -470,12 +451,10 @@ div.menunav ul li a:active{
     }
     /* Logotipo */
     #logo{
-        height: 200px;
-        width: auto;
-        margin-left: 4%;
-        margin-top: 10%;
-        margin-right: 10%;
-        margin-bottom: 10%;
+        
+        width: 30%;
+        height: auto;
+        margin:  18px 18px;
     }
 
 
@@ -492,12 +471,13 @@ div.menunav ul li a:active{
         width: 100%;
         margin: none;
     }
+    .icono-activo{
+        width: 100%;
+    }
 
-
-
- }
-      /* For tablets: */
-  @media only screen and (min-width: 850px) and (max-width:1023px){
+}
+    /* Media Querys para celulares pantallas medianas y grandes*/
+ @media only screen and (min-width: 850px) and (max-width:1023px){
 
 
     /* Encabezados: */
@@ -506,7 +486,7 @@ div.menunav ul li a:active{
         color:#d1d1d1;
         margin-top: 0;
         margin-bottom: 20px;
-        font-size: 150%;
+        font-size: 160%;
         letter-spacing: 4px;
         letter-spacing: 1px;
     }
@@ -556,6 +536,48 @@ div.menunav ul li a:active{
 
 
 
- }
+}
+    /* Media Querys para pantallas grandes*/
+ @media only screen and (min-width: 1024px){
 
+        /*Configuramos de forma personalizada los menus de navegación*/
+          nav div.menunav ul{
+            position: absolute;
+            top:245px;
+            right:10%;
+            list-style: none;
+            margin: 0;
+        }
+        div.menunav ul li{
+            display: inline-block;
+            margin-left:none;
+            padding:0;
+            margin: 0 15px;
+        }
+        div.menunav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 90%;
+            letter-spacing: 2px;
+            word-spacing: 4px;
+        
+        }
+        
+        div.menunav ul li a:hover{
+            /* border-bottom: 2px solid rgb(253, 63, 5); */
+            padding: 12px;
+            border: solid 2px white;
+            background-color: white;
+            color:black;
+            border-radius: 15px;
+        
+        }
+        div.menunav ul li a:active{
+            padding: 10px;
+            border: solid 2px white;
+            background-color: orange;
+            color:white;
+            border-radius: 15px;
+            }
+}
  
