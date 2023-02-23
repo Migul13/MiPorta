@@ -438,30 +438,46 @@ header p{
 
     }
     /*Configuración del Footer*/
+        /*Elementos de la nav*/
+        .footer-nav li a{
+            font-size: 90%;
+    
+            }
+            /*Modificando la proporcion de la barra de navegación*/
+        .barra-nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin-top: 2%;
+            margin-bottom:2%;
+    }
+            /*Definiendo el div de nav*/
+            .barra-nav{
+                margin-top: 5%;
+            }
+            /*Definiendo los div de los social -links */
+            div .social-links div{
+                display: block;
+                padding: 5%;
+                text-align: center;
+            }
+            /*Definiendo tamaño de los íconos */
+            .icono-redes{
+                margin-top: 10px;
+                width: 25%;
+            }
+            /*Definiendo tamaño del título de los íconos */
+    
+            footer h4{
+                font-size: 100%;
+            }
+            /*Definiendo tamaño de letra de la descripción de la página*/
+            footer sup{
+                font-size: 15px;
+            }
+   
 
-    .footer-nav li a{
-        font-size: 100%;
-    }
-
-    .barra-nav{
-        margin-top: 5%;
-        margin-bottom:20%;
-    }
-    div .social-links div{
-        display: block;
-        padding: 5% 15%;
-        text-align: center;
-    }
-    .icono-redes{
-        margin-top: 10px;
-        width: 45%;
-    }
-    footer h4{
-        font-size: 100%;
-    }
-    footer sup{
-        font-size: 13px;
-    }
 }
     /* Media Querys para celulares medianos y tablets*/
  @media only screen and (min-width: 540px) and (max-width: 850px){
@@ -552,21 +568,29 @@ header p{
             font-size: 130%;
     
             }
+            /*Modificando la proporcion de la barra de navegación*/
+        .barra-nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin-top: 2%;
+            margin-bottom:2%;
+    }
             /*Definiendo el div de nav*/
             .barra-nav{
                 margin-top: 5%;
-                margin-bottom:20%;
             }
             /*Definiendo los div de los social -links */
             div .social-links div{
                 display: block;
-                padding: 5% 15%;
+                padding: 5%;
                 text-align: center;
             }
             /*Definiendo tamaño de los íconos */
             .icono-redes{
                 margin-top: 10px;
-                width: 40%;
+                width: 20%;
             }
             /*Definiendo tamaño del título de los íconos */
     
@@ -575,7 +599,7 @@ header p{
             }
             /*Definiendo tamaño de letra de la descripción de la página*/
             footer sup{
-                font-size: 25px;
+                font-size: 20px;
             }
 
 }
@@ -639,24 +663,27 @@ header p{
         /*Configuración del Footer*/
         /*Elementos de la nav*/
         .footer-nav li a{
-            font-size: 150%;
-    
+            font-size: 120%;
             }
-            /*Definiendo el div de nav*/
-            .barra-nav{
-                margin-top: 5%;
-                margin-bottom:20%;
-            }
+        /*Modificando la proporcion de la barra de navegación*/
+        .barra-nav{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-top: 2%;
+                margin-bottom:2%;
+        }
+
             /*Definiendo los div de los social -links */
             div .social-links div{
                 display: block;
-                padding: 5% 15%;
+                padding: 4%;
                 text-align: center;
             }
             /*Definiendo tamaño de los íconos */
             .icono-redes{
-                margin-top: 10px;
-                width: 40%;
+                width: 15%;
             }
             /*Definiendo tamaño del título de los íconos */
     
@@ -665,7 +692,7 @@ header p{
             }
             /*Definiendo tamaño de letra de la descripción de la página*/
             footer sup{
-                font-size: 25px;
+                font-size: 20px;
             }
 
 
