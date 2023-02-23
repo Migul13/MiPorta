@@ -26,8 +26,8 @@
 
 /* EL fondo con degradado de la página */
 html {
-    background: linear-gradient(27deg,rgba(241, 106, 16, 0.589),rgba(73, 4, 100, 0.582));
-    color: rgb(72, 72, 72);
+    background: radial-gradient(circle,rgba(226, 1, 140),rgba(61, 1, 85));
+    color: rgb(233, 229, 229);
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -43,7 +43,7 @@ section{
 
 /* Encabezados: */
 div.contenedor{
-    background-image: linear-gradient(rgba(0,0,0,0.705),rgba(0,0,0,0.705)),url(../image/bg.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.623),rgba(0,0,0,0.705)),url(../image/bg.jpeg);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -230,13 +230,18 @@ header p{
         width: 20%;
 
     }
+   
 
 
 /* Para el modelo responsive: */
     /* Media Querys para celulares pequeños*/
  @media only screen and (min-width: 0px) and (max-width: 350px){
+        /*Color de fondo del body*/
+        html{
+         background: linear-gradient(270deg,rgba(226, 1, 140),rgba(61, 1, 85));
+        }
+        
         /* Encabezados: */
-    
         h1{
             color:#d1d1d1;
             margin-top: 0;
@@ -289,7 +294,7 @@ header p{
             margin:  20px 20px;
         }
     
-    
+        /* Para limpiar imagen*/
         .clearfix:after{
             content: ".";    
             clear: both;
@@ -298,10 +303,40 @@ header p{
             visibility: hidden;
         }
     
-    
+        /* Para dimensión de las imágenes de proyectos*/
         .img-clearfix li{
             width: 100%;
             margin: none;
+        }
+        /*Configuración del Footer*/
+        /*Elementos de la nav*/
+        .footer-nav li a{
+        font-size: 60%;
+
+        }
+        /*Definiendo el div de nav*/
+        .barra-nav{
+            margin-top: 5%;
+            margin-bottom:20%;
+        }
+        /*Definiendo los div de los social -links */
+        div .social-links div{
+            display: block;
+            padding: 5% 15%;
+            text-align: center;
+        }
+        /*Definiendo tamaño de los íconos */
+        .icono-redes{
+            width: 45%;
+        }
+        /*Definiendo tamaño del título de los íconos */
+
+        footer h4{
+            font-size: 65%;
+        }
+        /*Definiendo tamaño de letra de la descripción de la página*/
+        footer sup{
+            font-size: 10px;
         }
     
     
@@ -309,7 +344,12 @@ header p{
 }
     /* Media Querys para celulares medianos y grandes*/
  @media only screen and (min-width: 350px) and (max-width: 540px){
-    /* Encabezados: */
+ /*Color de fondo del body*/
+ html{
+    background: linear-gradient(to right,rgb(122, 143, 3),rgba(61, 1, 85));
+   }
+   
+   /* Encabezados: */
 
     h1{
         color:#d1d1d1;
@@ -397,10 +437,41 @@ header p{
 
 
     }
+    /*Configuración del Footer*/
+
+    .footer-nav li a{
+        font-size: 100%;
+    }
+
+    .barra-nav{
+        margin-top: 5%;
+        margin-bottom:20%;
+    }
+    div .social-links div{
+        display: block;
+        padding: 5% 15%;
+        text-align: center;
+    }
+    .icono-redes{
+        margin-top: 10px;
+        width: 45%;
+    }
+    footer h4{
+        font-size: 100%;
+    }
+    footer sup{
+        font-size: 13px;
+    }
 }
     /* Media Querys para celulares medianos y tablets*/
- @media only screen and (min-width: 541px) and (max-width: 850px){
-    /* Encabezados: */
+ @media only screen and (min-width: 540px) and (max-width: 850px){
+    /*Color de fondo del body*/
+ html{
+    background: linear-gradient(to left,rgb(184, 2, 114),rgba(61, 1, 85));
+   }
+   
+   /* Encabezados: */
+
 
     h1{
         text-align: right;
@@ -475,6 +546,38 @@ header p{
         width: 100%;
     }
 
+    /*Configuración del Footer*/
+        /*Elementos de la nav*/
+        .footer-nav li a{
+            font-size: 130%;
+    
+            }
+            /*Definiendo el div de nav*/
+            .barra-nav{
+                margin-top: 5%;
+                margin-bottom:20%;
+            }
+            /*Definiendo los div de los social -links */
+            div .social-links div{
+                display: block;
+                padding: 5% 15%;
+                text-align: center;
+            }
+            /*Definiendo tamaño de los íconos */
+            .icono-redes{
+                margin-top: 10px;
+                width: 40%;
+            }
+            /*Definiendo tamaño del título de los íconos */
+    
+            footer h4{
+                font-size: 130%;
+            }
+            /*Definiendo tamaño de letra de la descripción de la página*/
+            footer sup{
+                font-size: 25px;
+            }
+
 }
     /* Media Querys para celulares pantallas medianas y grandes*/
  @media only screen and (min-width: 850px) and (max-width:1023px){
@@ -533,6 +636,37 @@ header p{
         width: auto;
 
     }
+        /*Configuración del Footer*/
+        /*Elementos de la nav*/
+        .footer-nav li a{
+            font-size: 150%;
+    
+            }
+            /*Definiendo el div de nav*/
+            .barra-nav{
+                margin-top: 5%;
+                margin-bottom:20%;
+            }
+            /*Definiendo los div de los social -links */
+            div .social-links div{
+                display: block;
+                padding: 5% 15%;
+                text-align: center;
+            }
+            /*Definiendo tamaño de los íconos */
+            .icono-redes{
+                margin-top: 10px;
+                width: 40%;
+            }
+            /*Definiendo tamaño del título de los íconos */
+    
+            footer h4{
+                font-size: 150%;
+            }
+            /*Definiendo tamaño de letra de la descripción de la página*/
+            footer sup{
+                font-size: 25px;
+            }
 
 
 
@@ -578,6 +712,40 @@ header p{
             background-color: orange;
             color:white;
             border-radius: 15px;
+            }
+                /*Configuración del Footer*/
+        /*Elementos de la nav*/
+            .footer-nav li a{
+            font-size: 120%;
+    
+            }
+            /*Definiendo el div de nav*/
+            .barra-nav{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-top: 5%;
+                margin-bottom:2%;
+            }
+            /*Definiendo los div de los social -links */
+            div .social-links div{
+                display: block;
+                padding: 2% 2%;
+                text-align: center;
+            }
+            /*Definiendo tamaño de los íconos */
+            .icono-redes{
+                width: 10%;
+            }
+            /*Definiendo tamaño del título de los íconos */
+    
+            footer h4{
+                font-size: 150%;
+            }
+            /*Definiendo tamaño de letra de la descripción de la página*/
+            footer sup{
+                font-size: 20px;
             }
 }
  
